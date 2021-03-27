@@ -1,0 +1,22 @@
+{
+    "name": "zahran/data-mapper",
+    "description": "A data mapping tool that helps you rewrite JSON content or modify it.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mohamed Zahran",
+            "email": "m.zahran90@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zahran\\Mapper\\": "src/"
+        }
+    },
+    "require": {
+        "cakephp/utility": "^4.0",
+        "php": ">=7.1.0",
+        "psr/container": "^2.0",
+        "ext-json": "*"
+    }
+}
