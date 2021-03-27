@@ -41,17 +41,7 @@ needs. Each instance have an alias/id so it can be easily overridden by custom i
 be explained in detail later on.
 
 ```php
-/**
- * Data Mapper (https://github.com/mozahran/data-mapper)
- * Copyright 2021, Mohamed Zahran. (https://www.linkedin.com/in/mo-zahran/)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Mohamed Zahran (https://www.linkedin.com/in/mo-zahran/)
- * @link          https://github.com/mozahran/data-mapper
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+<?php
 
 require_once 'vendor/autoload.php';
 $container = \Zahran\Mapper\Container::getInstance();
@@ -690,17 +680,7 @@ can retire any of the core classes, just make sure you're implementing the right
    the new Cast Type you want and follow the example below:
 
 ```php
-/**
- * Data Mapper (https://github.com/mozahran/data-mapper)
- * Copyright 2021, Mohamed Zahran. (https://www.linkedin.com/in/mo-zahran/)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Mohamed Zahran (https://www.linkedin.com/in/mo-zahran/)
- * @link          https://github.com/mozahran/data-mapper
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+<?php
 
 namespace Your\Vendor\Name;
 
@@ -733,17 +713,7 @@ class MyCustomCastType implements CastTypeInterface
    under `cast_type.boolean`.
 
 ```php
-/**
- * Data Mapper (https://github.com/mozahran/data-mapper)
- * Copyright 2021, Mohamed Zahran. (https://www.linkedin.com/in/mo-zahran/)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Mohamed Zahran (https://www.linkedin.com/in/mo-zahran/)
- * @link          https://github.com/mozahran/data-mapper
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+<?php
 
 \Zahran\Mapper\Container::getInstance()->add(
     'cast_type.{type}', 
@@ -757,17 +727,7 @@ class MyCustomCastType implements CastTypeInterface
    Create the new Condition you want and follow the example below:
 
 ```php
-/**
- * Data Mapper (https://github.com/mozahran/data-mapper)
- * Copyright 2021, Mohamed Zahran. (https://www.linkedin.com/in/mo-zahran/)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Mohamed Zahran (https://www.linkedin.com/in/mo-zahran/)
- * @link          https://github.com/mozahran/data-mapper
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+<?php
 
 namespace Your\Vendor\Name;
 
@@ -803,17 +763,7 @@ class MyCustomCondition implements ConditionInterface
    under `condition.eq`.
 
 ```php
-/**
- * Data Mapper (https://github.com/mozahran/data-mapper)
- * Copyright 2021, Mohamed Zahran. (https://www.linkedin.com/in/mo-zahran/)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Mohamed Zahran (https://www.linkedin.com/in/mo-zahran/)
- * @link          https://github.com/mozahran/data-mapper
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+<?php
 
 \Zahran\Mapper\Container::getInstance()->add(
     'condition.{condition_type}', 
@@ -827,17 +777,7 @@ class MyCustomCondition implements ConditionInterface
    Create the new Condition you want and follow the example below:
 
 ```php
-/**
- * Data Mapper (https://github.com/mozahran/data-mapper)
- * Copyright 2021, Mohamed Zahran. (https://www.linkedin.com/in/mo-zahran/)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Mohamed Zahran (https://www.linkedin.com/in/mo-zahran/)
- * @link          https://github.com/mozahran/data-mapper
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+<?php
 
 namespace Your\Vendor\Name;
 
@@ -872,17 +812,7 @@ class Multiply implements MutatorInterface
    under `mutator.multiple`.
 
 ```php
-/**
- * Data Mapper (https://github.com/mozahran/data-mapper)
- * Copyright 2021, Mohamed Zahran. (https://www.linkedin.com/in/mo-zahran/)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Mohamed Zahran (https://www.linkedin.com/in/mo-zahran/)
- * @link          https://github.com/mozahran/data-mapper
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+<?php
 
 \Zahran\Mapper\Container::getInstance()->add(
     'mutator.{name}', 
