@@ -4,7 +4,7 @@
 
 ## Requirements
 
-- PHP 7.1 or higher.
+- PHP 7.2 or higher.
 - cakephp/utility 4.0 or higher.
 
 ## Table of Contents

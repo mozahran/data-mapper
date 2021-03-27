@@ -16,7 +16,7 @@
     },
     "require": {
         "cakephp/utility": "^4.0",
-        "php": ">=7.1.0",
+        "php": ">=7.2.0",
         "psr/container": "^2.0",
         "ext-json": "*"
     }
