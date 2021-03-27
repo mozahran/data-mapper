@@ -8,6 +8,7 @@
             "email": "m.zahran90@gmail.com"
         }
     ],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Zahran\\Mapper\\": "src/"
