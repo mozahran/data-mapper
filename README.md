@@ -50,16 +50,23 @@ $container->add([
     'cast_type.date' => new \Zahran\Mapper\CastType\Date(),
     'cast_type.integer' => new \Zahran\Mapper\CastType\Integer(),
     'cast_type.string' => new \Zahran\Mapper\CastType\Stringify(),
+    'cast_type.float' => new \Zahran\Mapper\CastType\FloatingPointNumber(),
     'condition.contains' => new \Zahran\Mapper\Condition\Contains(),
     'condition.eq' => new \Zahran\Mapper\Condition\Equals(),
     'condition.gt' => new \Zahran\Mapper\Condition\GreaterThan(),
     'condition.gte' => new \Zahran\Mapper\Condition\GreaterThanOrEquals(),
     'condition.in' => new \Zahran\Mapper\Condition\Inset(),
+    'condition.not_in' => new \Zahran\Mapper\Condition\NotInset(),
     'condition.lt' => new \Zahran\Mapper\Condition\LessThan(),
     'condition.lte' => new \Zahran\Mapper\Condition\LessThanOrEquals(),
     'condition.neq' => new \Zahran\Mapper\Condition\NotEquals(),
     'condition.notnull' => new \Zahran\Mapper\Condition\NotNullable(),
     'condition.null' => new \Zahran\Mapper\Condition\Nullable(),
+    'condition.is_numeric' => new \Zahran\Mapper\Condition\IsNumeric(),
+    'condition.is_string' => new \Zahran\Mapper\Condition\IsString(),
+    'condition.is_boolean' => new \Zahran\Mapper\Condition\IsBoolean(),
+    'condition.is_float' => new \Zahran\Mapper\Condition\IsFloat(),
+    'condition.is_double' => new \Zahran\Mapper\Condition\IsDouble(),
     'mutator.multiply' => new \Zahran\Mapper\Mutator\Multiply(),
     'helper.util' => new \Zahran\Mapper\Helper\Util(),
     'factory.cast_type' => new \Zahran\Mapper\Factory\CastTypeFactory(),
@@ -212,11 +219,17 @@ A list of supported condition types:
 * Greater Than: `gt`
 * Greater Than or Equals: `gte`
 * Inset: `in`
+* Not Inset: `not_in`
 * Less Than: `lt`
 * Less Than or Equals: `lte`
 * Not Equals: `neq`
 * Not Null: `notnull`
 * Null: `null`
+* Is Boolean: `is_boolean`
+* Is Double: `is_double`
+* Is Float: `is_float`
+* Is Numeric: `is_numeric`
+* Is String: `is_string`
 
 #### Original JSON:
 
@@ -314,6 +327,7 @@ A list of supported types:
 * Date: `date`
 * Integer: `integer`
 * String: `string`
+* Float: `float`
 
 #### Original JSON:
 
