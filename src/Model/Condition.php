@@ -26,7 +26,7 @@ class Condition
     protected $conditionType;
 
     /**
-     * @var string
+     * @var mixed
      */
     protected $value;
 
@@ -65,12 +65,16 @@ class Condition
         return $this;
     }
 
-    public function getValue(): string
+    public function getValue()
     {
         return $this->value;
     }
 
-    public function setValue(string $value): self
+    /**
+     * @param mixed $value
+     * @return $this
+     */
+    public function setValue($value): self
     {
         $this->value = $value;
         return $this;

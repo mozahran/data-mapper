@@ -16,7 +16,7 @@ namespace Zahran\Mapper\Condition;
 use Zahran\Mapper\Contract\Condition as ConditionInterface;
 use Zahran\Mapper\Model\Condition;
 
-class Contains implements ConditionInterface
+class Missing implements ConditionInterface
 {
     /**
      * @var Condition
@@ -31,11 +31,11 @@ class Contains implements ConditionInterface
 
     public function apply($originalValue)
     {
-        $result = false;
+        $isFound = false;
         $conditionValue = $this->model->getValue();
         if (is_array($originalValue)) {
             if (is_array($conditionValue)) {
-                // Find elements in the original array
+                // Find occurrences in the original array
                 $matches = 0;
                 foreach ($originalValue as $originalValueItem) {
                     foreach ($conditionValue as $conditionValueItem) {
@@ -44,12 +44,12 @@ class Contains implements ConditionInterface
                         }
                     }
                 }
-                $result = $matches === count($conditionValue);
+                $isFound = $matches === count($conditionValue);
             } else {
-                // Find an item in the original array
+                // Find an occurrence in the original array
                 foreach ($originalValue as $originalValueItem) {
                     if (stripos((string)$originalValueItem, (string)$conditionValue) !== false) {
-                        $result = true;
+                        $isFound = true;
                         break;
                     }
                 }
@@ -64,18 +64,18 @@ class Contains implements ConditionInterface
                         $matches++;
                     }
                 }
-                $result = $matches === count($conditionValue);
+                $isFound = $matches === count($conditionValue);
             } else {
                 // Find an occurrence in a text
                 if (stripos((string)$originalValue, (string)$conditionValue) !== false) {
-                    $result = true;
+                    $isFound = true;
                 }
             }
         }
-        if ($result) {
+        if (!$isFound) {
             return $this->model->getThen();
         }
-        if (!$result && $this->model->getOtherwise()) {
+        if ($isFound && $this->model->getOtherwise()) {
             return $this->model->getOtherwise();
         }
         return $originalValue;
