@@ -19,6 +19,6 @@
         "php": ">=7.2.0",
         "psr/container": "^2.0",
         "ext-json": "*",
-        "phpunit/phpunit": "8.*"
+        "phpunit/phpunit": "8.*||9.*"
     }
 }
