@@ -20,5 +20,10 @@
         "psr/container": "^2.0",
         "ext-json": "*",
         "phpunit/phpunit": "8.*||9.*"
+    },
+    "scripts": {
+        "test":[
+            "php vendor/bin/phpunit --no-configuration tests"
+        ]
     }
 }
