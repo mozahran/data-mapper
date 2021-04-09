@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/mozahran/data-mapper/actions/workflows/php.yml/badge.svg)](https://github.com/mozahran/data-mapper/actions/workflows/php.yml)
+
 # JSON Data Mapper
 
 > Author: [Mohamed Zahran](https://www.linkedin.com/in/mo-zahran/)
