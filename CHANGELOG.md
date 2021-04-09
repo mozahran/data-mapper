@@ -1,10 +1,15 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## v1.2.0 (2021-04-09)
+***
+### Added
+- Added PHPUnit 9 to requirements (Marc Prior).
+
 ## v1.2.0 (2021-04-02)
 ***
 ### Added
-- Add a new condition type: `\Zahran\Mapper\Condition\Missing`
+- Added a new condition type: `\Zahran\Mapper\Condition\Missing`
 - Added tests cases for Condition types: `Contains` & `Missing`
 
 ### Changed
