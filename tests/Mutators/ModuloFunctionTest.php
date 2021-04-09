@@ -6,7 +6,6 @@ namespace Mutators;
 
 use PHPUnit\Framework\TestCase;
 use Zahran\Mapper\Model\Mutator;
-use Zahran\Mapper\Mutator\BaseConvert;
 use Zahran\Mapper\Mutator\Modulo;
 
 class ModuloFunctionTest extends TestCase
