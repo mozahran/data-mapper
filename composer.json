@@ -23,7 +23,7 @@
     },
     "scripts": {
         "test":[
-            "/bin/php7.2 vendor/bin/phpunit --no-configuration tests"
+            "php vendor/bin/phpunit --no-configuration tests"
         ]
     }
 }
