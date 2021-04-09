@@ -32,7 +32,7 @@ class Date implements CastTypeInterface
     public function cast($originalValue)
     {
         if (!$this->model->getFormat()) {
-            throw new \InvalidArgumentException(__('The format must be provided!'));
+            throw new \InvalidArgumentException('The format must be provided!');
         }
         $date = new \DateTime($originalValue);
         return $date->format($this->model->getFormat());
