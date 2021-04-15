@@ -1,12 +1,12 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
-## v1.2.0 (2021-04-09)
+## v1.2.2 (2021-04-16)
 ***
-### Added
-- Added PHPUnit 9 to requirements (Marc Prior).
+### Fixed
+- The mutator model was not set by default.
 
-## v1.2.0 (2021-04-02)
+## v1.2.1 (2021-04-02)
 ***
 ### Added
 - Added a new condition type: `\Zahran\Mapper\Condition\Missing`
