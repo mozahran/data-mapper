@@ -60,6 +60,7 @@ class DataModifier implements DataModifierInterface
         /** @var Mutator $mutatorModel */
         foreach ($attribute->getMutators() as $mutatorModel) {
             $mutatorInstance = Container::getInstance()->getMutator($mutatorModel);
+            $mutatorInstance->setModel($mutatorModel);
             if (!is_array($value)) {
                 $value = $mutatorInstance->apply($value, $mutatorModel->getArguments());
             }
