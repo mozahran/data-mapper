@@ -12,6 +12,14 @@ class Test {
 
     }
 
+        public function test ($bar) {
+
+
+
+        echo   "a" . 1 ;
+
+    }
+
 }
 
 
