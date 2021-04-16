@@ -11,31 +11,30 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-namespace Zahran\Mapper\CastType;
+namespace Zahran\Mapper\Mutator;
 
-use Zahran\Mapper\Contract\CastType as CastTypeInterface;
-use Zahran\Mapper\Model\CastType;
+use Zahran\Mapper\Contract\Mutator as MutatorInterface;
+use Zahran\Mapper\Model\Mutator;
 
-class Date implements CastTypeInterface
+class Divide implements MutatorInterface
 {
     /**
-     * @var CastType
+     * @var Mutator
      */
     protected $model;
 
-    public function setModel(CastType $model): CastTypeInterface
+    public function setModel(Mutator $model): MutatorInterface
     {
         $this->model = $model;
         return $this;
     }
 
-    public function cast($originalValue)
+    public function apply($originalValue, array $arguments = [])
     {
-        if (!$this->model->getFormat()) {
-            throw new \InvalidArgumentException('The format must be provided!');
+        $newValue = $originalValue;
+        for($i=0; $i < count($arguments); $i++) {
+            $newValue /= $arguments[$i];
         }
-        $date = new \DateTime($originalValue);
-        return $date->format($this->model->getFormat());
+        return $newValue;
     }
 }
-
