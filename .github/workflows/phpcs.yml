@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 2
       - name: Install PHP CodeSniffer
         run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
       - name: Modified Files
