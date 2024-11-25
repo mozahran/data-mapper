@@ -840,12 +840,6 @@ class Multiply implements MutatorInterface
 
 All changes that makes the Mapper more accurate is always highly appreciated and welcome.
 
-## Credits
-
-- [Mohamed Zahran](https://github.com/mozahran)
-- [Mohamed Hafez](https://github.com/mohamedhafezqo)
-- [Ahmed Sallam](https://github.com/ahmedsallam1)
-
 ## License
 
 The JSON Mapper is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
