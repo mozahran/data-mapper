@@ -11,31 +11,30 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-namespace Zahran\Mapper\CastType;
+namespace Zahran\Mapper\Mutator;
 
-use Zahran\Mapper\Contract\CastType as CastTypeInterface;
-use Zahran\Mapper\Model\CastType;
+use Zahran\Mapper\Contract\Mutator as MutatorInterface;
+use Zahran\Mapper\Model\Mutator;
 
-class Date implements CastTypeInterface
+class BaseConvert implements MutatorInterface
 {
     /**
-     * @var CastType
+     * @var Mutator
      */
     protected $model;
 
-    public function setModel(CastType $model): CastTypeInterface
+    protected $defaultToBase = 10;
+
+    public function setModel(Mutator $model): MutatorInterface
     {
         $this->model = $model;
         return $this;
     }
 
-    public function cast($originalValue)
+    public function apply($originalValue, array $arguments = [])
     {
-        if (!$this->model->getFormat()) {
-            throw new \InvalidArgumentException('The format must be provided!');
-        }
-        $date = new \DateTime($originalValue);
-        return $date->format($this->model->getFormat());
+        $fromBase = (int) $arguments[0];
+        $toBase = ( isset($arguments[1]) && (int) $arguments[1] > 0 ) ? (int) $arguments[1]:$this->defaultToBase;
+        return base_convert($originalValue,$fromBase,$toBase);
     }
 }
-
